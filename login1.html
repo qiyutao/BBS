@@ -1,0 +1,35 @@
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/htm;charset=utf-8"  >
+<title>登录</title>
+<script language = "javascript">
+	function textLength(form)
+	{
+		if(form[0].value==""||form[1].value=="")
+		{
+			alert("账号不能为空");
+		}
+		else if(form[1].value=="")
+		{
+			alert("密码不能为空");
+		}
+		else
+		{
+			form.submit();
+		}
+	}
+</script>
+</head>
+
+<body background="image/login.jpg">
+<center>
+<form name='f1' action="check.php" method="post">
+	请输入帐号与密码<HR>
+	账号<input type="text" name="username" style="background-image:url('image/1.png');"><BR>
+	密码<input type="password" name="password" style="background-image:url('image/1.png');"><HR>
+    <input type=button value="确定" onclick="textLength(f1)" style="background-image:url('image/1.png');">
+	<a href="register.html">注册</a> <BR>
+</form>
+</center>
+</body>
+</html>
